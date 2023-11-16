@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" onKeyPressed="#onProcessKeyPress" prefHeight="500.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #858482; -fx-background-radius: 2px; -fx-border-color: #000; -fx-border-width: 5px; -fx-border-radius: 2px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.CalculatorController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <StackPane alignment="CENTER_RIGHT" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="output_calc" text="0" StackPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="Segoe UI Light" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </StackPane>
+      <StackPane prefHeight="100.0" prefWidth="340.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="100.0" stroke="BLACK" strokeType="INSIDE" styleClass="c" width="340.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2763157784938812" green="0.1982821673154831" blue="0.1982821673154831" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <Label fx:id="output" alignment="CENTER_RIGHT" contentDisplay="CENTER" text="0" StackPane.alignment="CENTER_RIGHT">
+               <font>
+                  <Font name="Segoe UI Black" size="40.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </StackPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="+/-">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="module" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="\%">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backSpace" mnemonicParsing="false" onAction="#onProcessClean" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="C">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="delete" mnemonicParsing="false" onAction="#onProcessAllClean" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px; -fx-background-color: #a82020;" text="AC">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btn_7" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="7">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_8" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="8">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_9" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="9">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="division" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="÷">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btn_4" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="4">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_5" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="5">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_6" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="6">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="multiplication" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="X">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btn_1" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="1">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_2" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="2">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_3" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="3">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_subtraction" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="-">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Button fx:id="btn_0" mnemonicParsing="false" onAction="#onProcessNumber" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="0">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_dot" mnemonicParsing="false" onAction="#onProcessDot" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text=".">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_equals" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="=">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_plus" mnemonicParsing="false" onAction="#onProcessOperator" prefHeight="50.0" prefWidth="75.0" style="-fx-background-radius: 20px;" text="+">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </children>
+</VBox>
